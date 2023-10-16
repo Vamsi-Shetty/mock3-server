@@ -66,7 +66,7 @@ app.post("/employees", async (req, res) => {
 
 app.get("/employees", async (req, res) => {
     const employees = await employeeModel.find(req.query);
-    res.send({employees: employees});
+    res.send({"employees": employees});
 })
 
 app.listen(PORT, async () => {
